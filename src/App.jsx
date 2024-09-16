@@ -1,18 +1,16 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-
-
+import DotStack from './DotStack';
 
 function App() {
   const [time, setTime] = useState('00:00:00');
-  const [on, setOn] = useState(false);
 
   useEffect(() => {
     setInterval(() => {
-      const t = new Date();
-      let h = t.getHours();
-      let m = t.getMinutes();
-      let s = t.getSeconds();
+      const date = new Date();
+      const t = date.toTimeString().slice(0, 8);
+      
+
       setTime(`${h}:${m}:${s}`);
     }, 1000)
   }, []);
@@ -20,9 +18,21 @@ function App() {
 
   return (
     <>
-      <h1>Hello World</h1>
-      <button onClick={() => setOn(!on)}>on/off</button>
-      <div className={on ? 'dot-on' : 'dot-off'}></div>
+      <h1>Binary Clock</h1>
+      <div className='binary-container'>
+        <div className='dot-container hours'>
+          <DotStack hours={true} />
+          <DotStack hours={false} />
+        </div>
+        <div className='dot-container minutes'>
+          <DotStack hours={false} />
+          <DotStack hours={false} />
+        </div>
+        <div className='dot-container seconds'>
+          <DotStack hours={false} />
+          <DotStack hours={false} />
+        </div>
+      </div>
       <h2>{time}</h2>
     </>
   )
