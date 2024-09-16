@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+.dot-off {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.dot-on {
+  background-color: grey;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
