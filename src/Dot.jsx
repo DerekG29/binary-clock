@@ -1,8 +1,10 @@
 function Dot(props) {
-  const on = props.on ? 'dot-on' : 'dot-off';
+  const { on } = props;
+
+  const c = on ? 'dot-on' : 'dot-off'; 
 
   return (
-      <div className={on}></div>
+      <div className={c}></div>
   )
 }
 

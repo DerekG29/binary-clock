@@ -1,12 +1,22 @@
 import Dot from "./Dot";
 
-function DotStack(props) {
-  const { hours } = props;
+const obj = {
+  '0': [0, 0, 0, 0],
+  '1': [0, 0, 0, 1],
+  '2': [0, 0, 1, 0],
+  '3': [0, 0, 1, 1],
+  '4': [0, 1, 0, 0],
+  '5': [0, 1, 0, 1],
+  '6': [0, 1, 1, 0],
+  '7': [0, 1, 1, 1],
+  '8': [1, 0, 0, 0],
+  '9': [1, 0, 0, 1]
+}
 
-  const bit_4 = true;
-  const bit_3 = false;
-  const bit_2 = true;
-  const bit_1 = false;
+function DotStack(props) {
+  const { hours, digit } = props;
+
+  const [bit_4, bit_3, bit_2, bit_1] = obj[digit];
 
   return (
     <>
