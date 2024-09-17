@@ -14,17 +14,18 @@ const obj = {
 }
 
 function DotStack(props) {
-  const { hours, digit } = props;
+  const { digit } = props;
 
   const [bit_4, bit_3, bit_2, bit_1] = obj[digit];
 
   return (
     <>
       <div className="dot-stack">
-        {!hours && <Dot on={bit_4}/>}
-        {!hours && <Dot on={bit_3}/>}
+        <Dot on={bit_4}/>
+        <Dot on={bit_3}/>
         <Dot on={bit_2}/>
         <Dot on={bit_1}/>
+        <div className='digit'>{digit}</div>
       </div>
     </>
   )

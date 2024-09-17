@@ -15,22 +15,20 @@ function App() {
 
   return (
     <>
-      <h1>Binary Clock</h1>
       <div className='binary-container'>
         <div className='dot-container hours'>
-          <DotStack hours={true} digit={time[0]} />
-          <DotStack hours={false} digit={time[1]}/>
+          <DotStack digit={time[0]} />
+          <DotStack digit={time[1]} />
         </div>
         <div className='dot-container minutes'>
-          <DotStack hours={false} digit={time[3]}/>
-          <DotStack hours={false} digit={time[4]}/>
+          <DotStack digit={time[3]} />
+          <DotStack digit={time[4]} />
         </div>
         <div className='dot-container seconds'>
-          <DotStack hours={false} digit={time[6]}/>
-          <DotStack hours={false} digit={time[7]}/>
+          <DotStack digit={time[6]} />
+          <DotStack digit={time[7]} />
         </div>
       </div>
-      <h2>{time}</h2>
     </>
   )
 }
