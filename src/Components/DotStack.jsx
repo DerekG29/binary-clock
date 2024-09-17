@@ -1,6 +1,6 @@
 import Dot from "./Dot";
 
-const obj = {
+const bit_key = {
   '0': [0, 0, 0, 0],
   '1': [0, 0, 0, 1],
   '2': [0, 0, 1, 0],
@@ -16,7 +16,7 @@ const obj = {
 function DotStack(props) {
   const { digit } = props;
 
-  const [bit_4, bit_3, bit_2, bit_1] = obj[digit];
+  const [bit_4, bit_3, bit_2, bit_1] = bit_key[digit];
 
   return (
     <>
