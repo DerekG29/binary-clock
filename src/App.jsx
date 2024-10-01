@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import DotStack from './DotStack';
+import DotStack from './Components/DotStack';
 
 function App() {
   const [time, setTime] = useState('00:00:00');
