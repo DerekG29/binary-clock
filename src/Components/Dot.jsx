@@ -1,10 +1,10 @@
 function Dot(props) {
   const { on } = props;
 
-  const c = on ? 'dot-on' : 'dot-off'; 
+  const c = on ? 'visible' : 'hidden'; 
 
   return (
-      <div className={c}></div>
+      <div className={`dot ${c}`}></div>
   )
 }
 
